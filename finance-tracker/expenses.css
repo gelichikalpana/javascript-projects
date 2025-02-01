@@ -1,0 +1,140 @@
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: "Arial", sans-serif;
+  /* background-image: url(Apps\ for\ finance\ management.webp); */
+
+  background-color: #e9f1f5; /* Lighter blue background */
+  background-size: cover;
+  background-position: center;
+}
+
+.container {
+  max-width: 900px;
+  margin: 50px auto;
+  padding: 20px;
+  background: rgba(237, 231, 231, 0.9);
+  border-radius: 10px;
+  box-shadow: 0 4px 40px rgba(11, 11, 11, 0.3);
+}
+
+h1 {
+  text-align: center;
+  color: #fff;
+  font-size: 2.5em;
+  margin: 20px 0;
+  padding: 20px 0;
+  background-color: #0056b3;
+  border-radius: 10px;
+  text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.4);
+}
+
+.balance {
+  text-align: center;
+  margin: 20px 0;
+}
+
+.balance h2 {
+  margin-bottom: 10px;
+  color: #555;
+}
+
+#balance {
+  font-size: 2.5em;
+  color: #2d2d2d;
+}
+
+.income-expense {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 20px;
+}
+
+.income-expense div {
+  flex: 1;
+  padding: 15px;
+  text-align: center;
+  border: 1px solid #ddd;
+  border-radius: 10px;
+  background-color: rgba(255, 255, 255, 0.95);
+  transition: background-color 0.3s, transform 0.2s; /* Added transform transition */
+}
+
+.income-expense div:hover {
+  background-color: rgba(225, 225, 225, 0.9);
+  transform: scale(1.02); /* Slight zoom on hover */
+}
+
+h4 {
+  margin-bottom: 10px;
+  color: #333;
+}
+
+.money {
+  font-size: 1.5em;
+}
+
+.plus {
+  color: #28a745;
+}
+
+.minus {
+  color: red;
+}
+
+.list {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+}
+
+.list li {
+  display: flex;
+  justify-content: space-between;
+  padding: 10px;
+  border-bottom: 1px solid #e0e0e0;
+  transition: background-color 0.3s, color 0.3s; /* Transition for color */
+}
+
+.list li:hover {
+  background-color: rgba(240, 240, 240, 0.9);
+  color: #0056b3; /* Change text color on hover */
+}
+
+.form-control {
+  margin-bottom: 15px;
+}
+
+input {
+  width: 100%;
+  padding: 12px;
+  margin-top: 5px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  transition: border-color 0.3s;
+}
+
+input:focus {
+  border-color: #007bff;
+}
+
+.btn {
+  display: block;
+  width: 100%;
+  padding: 12px;
+  background-color: #007bff;
+  color: white;
+  border: none;
+  cursor: pointer;
+  border-radius: 5px;
+  transition: background-color 0.3s, transform 0.2s; /* Added transform transition */
+}
+
+.btn:hover {
+  background-color: #0056b3;
+  transform: scale(1.05); /* Slight zoom on hover */
+}

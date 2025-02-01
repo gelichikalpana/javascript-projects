@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Completed Tasks</title>
+    <style>
+      body {
+        font-family: Arial, sans-serif;
+        background-color: #98fb98;
+        margin: 0;
+        padding: 0;
+        height: 100vh;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+      }
+
+      .container {
+        background-color: #ffc0cb;
+        padding: 20px;
+        box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        width: 500px;
+        height: auto;
+      }
+
+      ul {
+        list-style: none;
+        padding: 0;
+        display: flex;
+        flex-direction: column;
+        gap: 10px;
+      }
+
+      li {
+        background-color: #fff;
+        padding: 10px;
+        text-decoration: line-through;
+        border-left: 5px solid green;
+      }
+
+      h1,
+      h2 {
+        text-align: center;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="container">
+      <h1>Completed Tasks</h1>
+      <ul id="completed-task-list"></ul>
+      <a href="index.html">Back to Task Manager</a>
+    </div>
+
+    <script>
+      function CompletedTasks() {
+        const completedTaskList = document.getElementById(
+          "completed-task-list"
+        );
+        const completedTasks =
+          JSON.parse(localStorage.getItem("completedTasks")) || [];
+
+        completedTaskList.innerHTML = "";
+
+        completedTasks.forEach((task) => {
+          const li = document.createElement("li");
+          li.innerHTML = `
+          <strong>${task.title}</strong><br>
+          ${task.desc}<br>
+          Completed on: ${new Date(task.deadline).toLocaleString()}
+        `;
+
+          completedTaskList.appendChild(li);
+        });
+      }
+
+      CompletedTasks();
+    </script>
+  </body>
+</html>
